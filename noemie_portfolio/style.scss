@@ -2,7 +2,7 @@
 
 $white : #F1EFE3;
 $black : black;
-$lightWhite : rgb(241, 239, 227, 0.5);
+$lightWhite : rgba(241, 239, 227, 0.5);
 $blueGradient : linear-gradient(to bottom, #84A3D2, #EDEEE0);
 $blue : #84A3D2;
 
@@ -468,6 +468,27 @@ article {
                     align-items : center ;
                     width: 215px;
                     margin-bottom: 8px;
+                    & span {
+                        &::after{
+                            content: '';
+                            height: 2px;
+                            background: $blue;
+                            width: 100%;
+                            display: inherit;
+                            transform: scaleX(0);
+                            transform-origin: left;
+                            transition: transform 200ms ease-in-out;
+                        }
+                        &:hover::after{
+                            transform: scaleX(1);
+                        }
+                    }
+                    & img {
+                        transition: transform 400ms ease-in-out;
+                    }
+                    &:hover img {
+                        transform: rotate(45deg);
+                    }
                     }
                 }
             }
@@ -497,48 +518,111 @@ footer {
     justify-content: space-between;
     border-top: $white 1px solid;
     padding: 24px 0;
-    & .link {
-        display: flex;
-        justify-content: space-between;
-        width: 52vw;
-        &_home {
-            display: flex;
-            flex-direction: column;
-            & h3 {
-                margin-bottom: 8px;
-            }
-            & a {
-                margin-bottom: 8px;
-            }
-        }
-        &_contact {
-            
-            & h3 {
-                margin-bottom: 8px;
-            }
-            & div {
-                margin-bottom: 8px;
-            }
-        }
-        &_credits {
-            
-            & h3 {
-                margin-bottom: 8px;
-            }
-            & div {
-                margin-bottom: 8px;
-                & a {
-                    border-bottom: 1px solid $white ;
-                }
-                
-            }
-        }
-    }
+    
     & > .markName {
         align-items: flex-start;
     }
 }
-
+.link {
+    display: flex;
+    justify-content: space-between;
+    width: 52vw;
+    &_home {
+        
+        display: flex;
+        flex-direction: column;
+        & h3 {
+            margin-bottom: 8px;
+            font-weight: 600;
+        font-size: 24px;
+        cursor: pointer;
+        width: max-content;
+        &::after{
+            content: '';
+            height: 2px;
+            background: $blue;
+            width: 100%;
+            display: inherit;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 200ms ease-in-out;
+        }
+        &:hover::after{
+            transform: scaleX(1);
+        }
+        }
+        & a {
+            margin-bottom: 8px;
+            font-weight: 600;
+        font-size: 24px;
+        width: max-content;
+        &::after{
+            content: '';
+            height: 2px;
+            background: $blue;
+            width: 100%;
+            display: inherit;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 200ms ease-in-out;
+        }
+        &:hover::after{
+            transform: scaleX(1);
+        }
+        }
+        
+    }
+    &_contact {
+        font-weight: 600;
+        font-size: 24px;
+        & h3 {
+            margin-bottom: 8px;
+            cursor: pointer;
+            width: max-content;
+            &::after{
+                content: '';
+                height: 2px;
+                background: $blue;
+                width: 100%;
+                display: inherit;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 200ms ease-in-out;
+            }
+            &:hover::after{
+                transform: scaleX(1);
+            }
+        }
+        & div {
+            margin-bottom: 8px;
+            font-weight: 400;
+            width: 131px;
+            display: flex;
+            justify-content: space-between;
+         & img {
+            
+            transition: transform 400ms ease-in-out;
+            
+         }
+         &:hover img{
+            transform: rotate(90deg);
+        }
+        }
+    }
+    &_credits {
+        
+        & h3 {
+            margin-bottom: 8px;
+        }
+        & div {
+            margin-bottom: 8px;
+            & a {
+                border-bottom: 1px solid $white ;
+            }
+            
+        }
+    }
+}
 
 // .cursor {
 //     position: fixed;
