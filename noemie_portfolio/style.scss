@@ -8,7 +8,7 @@ $blue : #84A3D2;
 
 //TODO Sotcker les tailles de font dans des variable pour préparer le responsive
 
-$text : 24px;
+$text : 1.55vw;
 $h1 : 6.73vw;
 $h2: 3.63vw;
 
@@ -71,13 +71,13 @@ main {
 .container {
     
     height: 100%;
-    padding: 0 $h1;
+    padding: 2.44vh $h1;
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 77px;
+    height:  7.837vh;
     
     & nav {
         display: flex;
