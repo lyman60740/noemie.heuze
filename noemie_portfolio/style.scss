@@ -6,11 +6,20 @@ $lightWhite : rgba(241, 239, 227, 0.5);
 $blueGradient : linear-gradient(to bottom, #84A3D2, #EDEEE0);
 $blue : #84A3D2;
 
+//TODO Sotcker les tailles de font dans des variable pour préparer le responsive
+
+$text : 24px;
+$h1 : 6.73vw;
+$h2: 3.63vw;
+
+
+
+
 body {
     margin: 0;
     font-family: 'Syne', sans-serif;
     background: $black;
-    font-size: 24px;
+    font-size: $text;
     font-weight: 400;
     color: $white;
     // cursor: none;
@@ -30,11 +39,11 @@ h1, h2,h3 {
 }
 h1 {
     font-weight: 500;
-    font-size: 104px;
+    font-size: $h1;
     transform: translateX(-8px);
 }
 h2 {
-    font-size: 56px;
+    font-size: $h2;
     font-weight: 500;
     transform: translateX(-5px);
     margin-bottom: 104px;
@@ -57,11 +66,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-top: 17.42vh;
 }
 .container {
     
     height: 100%;
-    padding: 0 104px;
+    padding: 0 $h1;
 }
 header {
     display: flex;
@@ -73,9 +83,9 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 52vw;
+        width: 53.16vw;
         & a {
-            margin-right:166px;
+           
             &::after{
                 content: '';
                 height: 2px;
@@ -113,7 +123,7 @@ header {
 }
 article {
     height: max-content;
-    min-height: 100vh;
+   
     width: 100%;
     margin-bottom: 200px;
 }
@@ -131,7 +141,7 @@ article {
     margin-right: 52px;
 }
 .landing {
-    width: 52vw;
+    width: 53.16vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -187,7 +197,7 @@ article {
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    font-size: 24px;
+    font-size: $text;
     font-family: 'Syne', sans-serif;
     color: $white;
     &_circleWhite {
@@ -247,16 +257,16 @@ article {
         justify-content: center;
     }
     background: black;
-    width: 229px;
+    width: 14.79vw;
     aspect-ratio: 1;
     border-radius: 50%;
     &_largeCircle {
-        height: 130px;
+        
         color: initial;
         border-style: solid;
         border-width: 2px;
         border-radius: 50%;
-        width: 130px;
+        width: 8.39vw;
         aspect-ratio: 1;
         display: flex;
         align-items: center;
@@ -264,7 +274,7 @@ article {
     }
     &_blue {
         border-radius: 50%;
-    width: 120px;
+    width: 7.79vw;
     aspect-ratio: 1;
     
     background: $blue;
@@ -305,10 +315,10 @@ article {
     &_bloc {
         display: flex;
     flex-direction: column;
-    width: 52vw;
+    width: 53.16vw;
         &_content {
             &_photo {
-                width: 52vw;
+                width: 53.16vw;
                 height: 26vw;
                 border-radius: 28px;
                 background-image: url(./assets/photo.jpg);
@@ -355,7 +365,7 @@ article {
             &:hover {
                 // cursor:none;
             }
-            width: 52vw;
+            width: 53.16vw;
             display: flex;
             flex-direction: column;
             &_line {
@@ -376,12 +386,12 @@ article {
                 & h2 {
                     margin-bottom: 16px;
                     font-weight: 500;
-                    font-size: 56px;
+                    font-size: $h2;
                 }
                 & span {
                     margin-bottom: 24px;
                     font-weight: 400;
-                    font-size: 24px;
+                    font-size: $text;
                 }
                 & div {
                     height: 1px ;
@@ -406,7 +416,7 @@ article {
         display: flex;
         justify-content: flex-end;
         &_right {
-            width: 52vw;
+            width: 53.16vw;
             display: flex;
             flex-direction: column;
             & form {
@@ -420,7 +430,7 @@ article {
                     padding:24px 0 ;
                     color: $white;
                     font-family: 'Syne', sans-serif;
-                    font-size: 24px;
+                    font-size: $text;
                     font-weight: 400;
                     width: 100%;
                     &:focus {
@@ -428,14 +438,14 @@ article {
                     }
                     &::placeholder {
                         font-family: 'Syne', sans-serif;
-                        font-size: 24px;
+                        font-size: $text;
                         font-weight: 400;
                     }
                 }
                 & button {
                     color: $black;
                     font-family: 'Syne', sans-serif;
-                        font-size: 24px;
+                        font-size: $text;
                         font-weight: 600;
                         height: 104px;
                         width: 104px;
@@ -503,7 +513,7 @@ textarea {
     padding: 24px 0;
     color: $white;
     font-family: 'Syne', sans-serif;
-    font-size: 24px;
+    font-size: $text;
     font-weight: 400;
     height: 133px;
     width: 100%;
@@ -526,7 +536,7 @@ footer {
 .link {
     display: flex;
     justify-content: space-between;
-    width: 52vw;
+    width: 53.16vw;
     &_home {
         
         display: flex;
@@ -534,7 +544,7 @@ footer {
         & h3 {
             margin-bottom: 8px;
             font-weight: 600;
-        font-size: 24px;
+        font-size: $text;
         cursor: pointer;
         width: max-content;
         &::after{
@@ -554,7 +564,7 @@ footer {
         & a {
             margin-bottom: 8px;
             font-weight: 600;
-        font-size: 24px;
+        font-size: $text;
         width: max-content;
         &::after{
             content: '';
@@ -574,7 +584,7 @@ footer {
     }
     &_contact {
         font-weight: 600;
-        font-size: 24px;
+        font-size: $text;
         & h3 {
             margin-bottom: 8px;
             cursor: pointer;
